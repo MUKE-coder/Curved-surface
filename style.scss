@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  padding: 5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}
+.flat-section {
+  background: linear-gradient(to bottom right, darkred, darkblue);
+  color: white;
+}
+.slanted-section {
+  background: linear-gradient(to right, darkgreen, darkred);
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  .content {
+    max-width: 600px;
+  }
+}
+.curved-section {
+  background: white;
+  color: white;
+  margin-top: -100px;
+  position: relative;
+  overflow: hidden;
+  .content {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg, #001930, #312e81c3);
+    border-radius: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%) scale(1.5);
+  }
+}
+
+.wavy-section {
+  background: blue;
+  color: wheat;
+  position: relative;
+}
+
+.custom-shape-divider-top-1679913258 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1679913258 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 95px;
+}
+
+.custom-shape-divider-top-1679913258 .shape-fill {
+  fill: #ffffff;
+}

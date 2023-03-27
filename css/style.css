@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  padding: 5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+.flat-section {
+  background: -webkit-gradient(linear, left top, right bottom, from(darkred), to(darkblue));
+  background: linear-gradient(to bottom right, darkred, darkblue);
+  color: white;
+}
+
+.slanted-section {
+  background: -webkit-gradient(linear, left top, right top, from(darkgreen), to(darkred));
+  background: linear-gradient(to right, darkgreen, darkred);
+  color: white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+.slanted-section .content {
+  max-width: 600px;
+}
+
+.curved-section {
+  background: white;
+  color: white;
+  margin-top: -100px;
+  position: relative;
+  overflow: hidden;
+}
+.curved-section .content {
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+.curved-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(#001930), to(rgba(49, 46, 129, 0.7647058824)));
+  background-image: linear-gradient(90deg, #001930, rgba(49, 46, 129, 0.7647058824));
+  border-radius: 50%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: translate(-50%) scale(1.5);
+          transform: translate(-50%) scale(1.5);
+}
+
+.wavy-section {
+  background: blue;
+  color: wheat;
+  position: relative;
+}
+
+.custom-shape-divider-top-1679913258 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1679913258 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 95px;
+}
+
+.custom-shape-divider-top-1679913258 .shape-fill {
+  fill: #ffffff;
+}
